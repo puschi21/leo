@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<style>
+button {
+ display: flex;
+ height: 3em;
+ width: 100px;
+ align-items: center;
+ justify-content: center;
+ background-color: #eeeeee4b;
+ border-radius: 3px;
+ letter-spacing: 1px;
+ transition: all 0.2s linear;
+ cursor: pointer;
+ border: none;
+ background: #fff;
+
+}
+
+button > svg {
+ margin-right: 5px;
+ margin-left: 5px;
+ font-size: 20px;
+ transition: all 0.4s ease-in;
+}
+
+button:hover > svg {
+ font-size: 1.2em;
+ transform: translateX(-5px);
+}
+
+button:hover {
+ box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+ transform: translateY(-2px);
+}
+
+#slider {
+	overflow: hidden;
+}
+#slider figure {
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	animation: 20s slider infinite;
+}
+#slider figure img {
+	float: left;
+	width: 20%;
+}
+
+@keyframes slider {
+	0% {
+		left: 0;
+	}
+	20% {
+		left: 0;
+	}
+	25% {
+		left: -100%;
+	}
+	45% {
+		left: -100%;
+	}
+	50% {
+		left: -200%;
+	}
+	70% {
+		left: -200%;
+	}
+	75% {
+		left: -300%;
+	}
+	95% {
+		left: -300%;
+	}
+	100% {
+		left: -400%;
+	}
+}
+</style>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LEO Black Eagle Oradea </title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link href="css/style.css" rel="stylesheet">
+ 
+  <!-- Google Font -->  
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans:300,400,700" rel="stylesheet">
+    </head>
+    <body>
+      <section class="case-study" id="section01">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+	  <br><button>
+  <a href="index.html" style="color:black"><svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024"><path d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.00912-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z"></path></svg>
+  <span>Înapoi</span>
+</a></button>
+              <br><h1 class="heading"><span style="color:#ebb700;">Plantare</span> de copaci</h1>
+			  <img style="width:100px; height:3px; margin-bottom:30px" src="assets/linie.jpg">
+				<div id="slider">
+						<figure>
+							<img src="assets/pc1.jpg">
+							<img src="assets/pc2.jpg">
+							<img src="assets/pc3.jpg">
+							<img src="assets/pc4.jpg">
+							<img src="assets/pc1.jpg">
+						</figure>
+					</div>
+  
+              <div class="swiper-container2 client-swiper" style="margin-top:5%">
+				<p style="text-indent: 5%;">
+					Descriere
+				</p>
+				<p style="text-indent: 5%;">
+					Descriere
+				</p>
+              </div>
+            </div>
+          </div>
+      </section>
+      <!-- Footer -->
+      <footer id="section03">
+        <div class="container2-fluid">
+          <div class="row footer">
+            <div class="col-md-12 text-center">
+              <h1>LEO<br><span>Black Eagle</span></h1>
+               <h3><a href="tel:0771 111 111" class="hover yellowhover">0771 111 111</h3>
+               <h3><a href="mailto:leoblackeagle124@gmail.com" class="hover yellowhover">leoblackeagle124@gmail.com</a></h3>
+			  <br>
+			  <br>
+			  <br>
+              <ul class="social-links">
+				<li><a href="https://www.instagram.com/leoblackeagle_oradea"><img src="assets/instagram.jpg"></a></li>
+                <li><a href="https://www.facebook.com/LeoBlackEagleO/?locale=ro_RO"><img src="assets/facebook.jpg"></a></li>
+                <li><a href="https://www.tiktok.com/@leoblackeagle_oradea"><img src="assets/tiktok.jpg"></a></li>
+              </ul>
+            </div>
+          </div>
+      </footer>
+	  <script>
+	  const lightbox = document.createElement('div')
+lightbox.id = 'lightbox'
+document.body.appendChild(lightbox)
+
+const images = document.querySelectorAll('img')
+images.forEach(image => {
+  image.addEventListener('click', e => {
+    lightbox.classList.add('active')
+    const img = document.createElement('img')
+    img.src = image.src
+    while (lightbox.firstChild) {
+      lightbox.removeChild(lightbox.firstChild)
+    }
+    lightbox.appendChild(img)
+  })
+})
+
+lightbox.addEventListener('click', e => {
+  if (e.target !== e.currentTarget) return
+  lightbox.classList.remove('active')
+})
+	  </script>
+    </body>
+    </html>
